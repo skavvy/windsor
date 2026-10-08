@@ -1,0 +1,9 @@
+res://layer1.scn
+res://shaders/wave.gdshader
+res://addons/quill-ide/tabs_theme.tres
+res://addons/phantom_camera/themes/theme.tres
+res://shaders/sky.gdshader
+res://custom_nodes/wind_texture_2d.gd
+res://custom_nodes/wind_area_2d.gd
+res://custom_nodes/world_area_2d.gd
+res://addons/godot_super-wakatime/plugin.cfg
