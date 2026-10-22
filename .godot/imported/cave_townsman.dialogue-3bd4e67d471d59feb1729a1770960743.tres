@@ -1,0 +1,113 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_h14kv"]
+
+[resource]
+script = ExtResource("1_h14kv")
+using_states = PackedStringArray()
+cues = {
+"start": "1"
+}
+character_names = PackedStringArray("???")
+first_cue = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "cue"
+},
+"1": {
+&"character": "???",
+&"id": "1",
+&"next_id": "2",
+&"static_id": "",
+&"text": "Madam Windsor. [next=auto]",
+&"type": "dialogue"
+},
+"10": {
+&"character": "???",
+&"id": "10",
+&"next_id": "11",
+&"static_id": "",
+&"text": "Now go on and Flutter out.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end!",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"character": "???",
+&"id": "2",
+&"next_id": "3",
+&"static_id": "",
+&"text": "What's some high-horse-riding girl like you doing here?",
+&"type": "dialogue"
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"responses": PackedStringArray("3", "8"),
+&"static_id": "",
+&"text": "I fell.",
+&"type": "response"
+},
+"4": {
+&"character": "???",
+&"id": "4",
+&"next_id": "5",
+&"static_id": "",
+&"text": "[wait=0.5]",
+&"type": "dialogue"
+},
+"5": {
+&"character": "???",
+&"id": "5",
+&"next_id": "6",
+&"static_id": "",
+&"text": "[wave]Really[/wave], now?",
+&"type": "dialogue"
+},
+"6": {
+&"character": "???",
+&"id": "6",
+&"next_id": "7",
+&"static_id": "",
+&"text": "I don't think I believe that.",
+&"type": "dialogue"
+},
+"7": {
+&"character": "???",
+&"id": "7",
+&"next_id": "11",
+&"static_id": "",
+&"text": "Now find your way out, [shake rate=20 level=10]royal scum[/shake].",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"next_id": "9",
+&"static_id": "",
+&"text": "I am on a crusade, of sorts.",
+&"type": "response"
+},
+"9": {
+&"character": "???",
+&"id": "9",
+&"next_id": "10",
+&"static_id": "",
+&"text": "We don't take [shake rate=20 level=10]too kindly[/shake] to your type around here.",
+&"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "4.1.0"

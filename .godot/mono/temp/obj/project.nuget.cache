@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "3sJ7SnRRfI0=",
+  "success": true,
+  "projectFilePath": "/home/crphi/windsor-fields/Windsor.csproj",
+  "expectedPackageFiles": [
+    "/home/crphi/.nuget/packages/godot.sourcegenerators/4.7.2/godot.sourcegenerators.4.7.2.nupkg.sha512",
+    "/home/crphi/.nuget/packages/godotsharp/4.7.2/godotsharp.4.7.2.nupkg.sha512",
+    "/home/crphi/.nuget/packages/godotsharpeditor/4.7.2/godotsharpeditor.4.7.2.nupkg.sha512",
+    "/home/crphi/.nuget/packages/microsoft.netcore.app.ref/8.0.30/microsoft.netcore.app.ref.8.0.30.nupkg.sha512",
+    "/home/crphi/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.30/microsoft.aspnetcore.app.ref.8.0.30.nupkg.sha512"
+  ],
+  "logs": []
+}
