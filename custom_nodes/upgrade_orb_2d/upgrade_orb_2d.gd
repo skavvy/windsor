@@ -7,6 +7,7 @@ class_name UpgradeOrb2D
 @export var id: int = 0
 var collision_shape: CollisionShape2D
 var cpu_particles: CPUParticles2D
+var sound_player: AudioStreamPlayer2D
 var used: bool = false
 var render_sprite: bool = true
 
@@ -62,6 +63,14 @@ func _ready() -> void:
 	cpu_particles.color_ramp.colors = PackedColorArray([Color(0x92e8c0ff), Color(0x92e8c000)])
 	#endregion
 	
+	#region Sound
+	sound_player = AudioStreamPlayer2D.new()
+	add_child(sound_player)
+	sound_player.playing = false
+	sound_player.autoplay = false
+	sound_player.stream = preload("res://assets/audio/upgrade_hit.ogg")
+	#endregion
+	
 	add_child(collision_shape)
 	add_child(cpu_particles)
 	
@@ -84,6 +93,7 @@ func _process(_delta: float) -> void:
 					get_parent().add_child(slowdown)
 				
 					cpu_particles.emitting = true
+					sound_player.playing = true
 					cpu_particles.direction = area.get_parent().velocity.normalized()
 					cpu_particles.initial_velocity_min = area.get_parent().velocity.length()
 				
@@ -91,5 +101,9 @@ func _process(_delta: float) -> void:
 					queue_redraw()
 				
 					await cpu_particles.finished
+					await sound_player.finished
+					sound_player.playing = false
 				else:
 					await cpu_particles.finished
+					await sound_player.finished
+					sound_player.playing = false

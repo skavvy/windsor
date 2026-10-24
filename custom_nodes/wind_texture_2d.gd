@@ -7,16 +7,12 @@ var lightning_cooldown: Timer
 var lightning_decider: RandomNumberGenerator
 @onready var real_ambience: Ambience = Ambience.new()
 var main_audio_player: AudioStreamPlayer
-var fade_audio_player: AudioStreamPlayer
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		main_audio_player = AudioStreamPlayer.new()
 		add_child(main_audio_player)
 		main_audio_player.autoplay = true
-		main_audio_player.playing = true
-		fade_audio_player = AudioStreamPlayer.new()
-		add_child(fade_audio_player)
 	
 	z_index = -10
 	texture = PlaceholderTexture2D.new()
@@ -74,9 +70,7 @@ func _process(_delta: float) -> void:
 		add_child(main_audio_player)
 		main_audio_player.autoplay = true
 		main_audio_player.playing = true
-		fade_audio_player = AudioStreamPlayer.new()
-		add_child(fade_audio_player)
-		
+	
 	real_ambience.cloud_color.r = move_toward(real_ambience.cloud_color.r, ambience.cloud_color.r, 0.05)
 	real_ambience.cloud_color.g = move_toward(real_ambience.cloud_color.g, ambience.cloud_color.g, 0.05)
 	real_ambience.cloud_color.b = move_toward(real_ambience.cloud_color.b, ambience.cloud_color.b, 0.05)
@@ -104,6 +98,7 @@ func _process(_delta: float) -> void:
 		var timestamp = main_audio_player.get_playback_position()
 		main_audio_player.stream = ambience.soundscape
 		main_audio_player.play(timestamp)
+	
 	if not main_audio_player.playing:
 		main_audio_player.play()
 	

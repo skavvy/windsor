@@ -11,6 +11,7 @@ var timeout: SceneTreeTimer
 
 var collision_shape: CollisionShape2D
 var cpu_particles: CPUParticles2D
+var sound_player: AudioStreamPlayer2D
 var disabled: bool = false
 
 func _draw() -> void:
@@ -66,6 +67,14 @@ func _ready() -> void:
 	cpu_particles.process_mode = Node.PROCESS_MODE_ALWAYS
 	#endregion
 	
+	#region Sound
+	sound_player = AudioStreamPlayer2D.new()
+	add_child(sound_player)
+	sound_player.playing = false
+	sound_player.autoplay = false
+	sound_player.stream = preload("res://assets/audio/boost_hit.ogg")
+	#endregion
+	
 	add_child(collision_shape)
 	add_child(cpu_particles)
 
@@ -80,6 +89,7 @@ func _process(_delta: float) -> void:
 			cpu_particles.direction = direction
 			area.boost(direction * speed)
 			cpu_particles.emitting = true
+			sound_player.playing = true
 			disabled = true
 			queue_redraw()
 			timeout = get_tree().create_timer(2)

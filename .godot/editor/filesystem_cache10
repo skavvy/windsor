@@ -1,11 +1,11 @@
 3e2cc9f74922c2592e3236b3f5b5179c
-::res://::1792841601
+::res://::1792846422
 debugger.gd::GDScript::2490682698519721889::1791969542::0::1::::WindsorDebugger<>Node<><>0<>1<><>::
 default_bus_layout.tres::AudioBusLayout::5794130599311707859::1792839868::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1791831922::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1792846422::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::5173499482193107828::1791528626::1791531871::1::::<><><>0<>0<>6b13e1e4531271ca39cbf0c1f54fc34f<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 layer1.png::CompressedTexture2D::8370647087894757240::1791398714::1791398716::1::::<><><>0<>0<>f2d534160ef73540c2aeef40dd39e125<>res://.godot/imported/layer1.png-791900019db5590838ed9db21f733cef.ctex::
-layer1.scn::PackedScene::45851702904883408::1792841601::0::1::::<><><>0<>0<><>::uid://bbqrgeiwx086h::::res://debugger.gd<>uid://dua5j8dcv80io::::res://custom_nodes/save_resource.gd<>uid://dri2lm078k833::::res://layer1.png<>uid://db3qcdd8ka1bv::::res://custom_nodes/spawn_point_2d/spawn_point_2d.gd<>uid://sktkdt8kcbos::::res://custom_nodes/world_area_2d.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd<>uid://b14m68pn8vf8q::::res://assets/audio/wind.ogg<>uid://c1ok572jvhlhj::::res://assets/terrain/fields_terrain_fill.png<>uid://ydco1g5gr1u6::::res://custom_nodes/polygon_terrain_2d.gd<>uid://ckr8ijicx8byj::::res://shaders/water.gdshader<>uid://c1yy3ipykmohy::::res://custom_nodes/polygon_deathplane_2d.gd<>uid://cdynqttisvgyc::::res://shaders/wave.gdshader<>uid://bhtg1w84crpaw::::res://custom_nodes/boost_orb_2d.gd<>uid://cgy6rp2ulbkye::::res://assets/terrain/cave_terrain_fill.png<>uid://bbx6e1rnaeld2::::res://custom_nodes/bounce_orb_2d/bounce_orb_2d.gd<>uid://c7j7qyya3pca1::::res://custom_nodes/tutorial_area.gd<>uid://ddjkm2ot5p2rx::::res://assets/audio/rain.ogg<>uid://djiwsbde33oxs::::res://custom_nodes/screen_object_2d.gd<>uid://ceu5wfmarvmhm::::res://assets/spikes.png<>uid://cwsvi1w8qph73::::res://custom_nodes/unsafe_area_2d.gd<>uid://blnuvnub0qln3::::res://custom_nodes/wind_area_2d.gd<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://c26q5k5xv0rax::::res://assets/Early GameBoy.ttf<>uid://bjkc0k3qyny5p::::res://timer_label.gd<>uid://be0f6kj8lgakf::::res://custom_nodes/upgrade_orb_2d/upgrade_orb_2d.gd
+layer1.scn::PackedScene::45851702904883408::1792846331::0::1::::<><><>0<>0<><>::uid://bbqrgeiwx086h::::res://debugger.gd<>uid://dua5j8dcv80io::::res://custom_nodes/save_resource.gd<>uid://dri2lm078k833::::res://layer1.png<>uid://db3qcdd8ka1bv::::res://custom_nodes/spawn_point_2d/spawn_point_2d.gd<>uid://sktkdt8kcbos::::res://custom_nodes/world_area_2d.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd<>uid://b14m68pn8vf8q::::res://assets/audio/wind.ogg<>uid://c1ok572jvhlhj::::res://assets/terrain/fields_terrain_fill.png<>uid://ydco1g5gr1u6::::res://custom_nodes/polygon_terrain_2d.gd<>uid://ckr8ijicx8byj::::res://shaders/water.gdshader<>uid://c1yy3ipykmohy::::res://custom_nodes/polygon_deathplane_2d.gd<>uid://cdynqttisvgyc::::res://shaders/wave.gdshader<>uid://bhtg1w84crpaw::::res://custom_nodes/boost_orb_2d.gd<>uid://cgy6rp2ulbkye::::res://assets/terrain/cave_terrain_fill.png<>uid://bbx6e1rnaeld2::::res://custom_nodes/bounce_orb_2d/bounce_orb_2d.gd<>uid://dfpce67ex6wyd::::res://custom_nodes/ambience_area_2d.gd<>uid://df4lp0nscw1u2::::res://assets/audio/water_waves.mp3<>uid://c7j7qyya3pca1::::res://custom_nodes/tutorial_area.gd<>uid://ddjkm2ot5p2rx::::res://assets/audio/rain.ogg<>uid://djiwsbde33oxs::::res://custom_nodes/screen_object_2d.gd<>uid://ceu5wfmarvmhm::::res://assets/spikes.png<>uid://cwsvi1w8qph73::::res://custom_nodes/unsafe_area_2d.gd<>uid://blnuvnub0qln3::::res://custom_nodes/wind_area_2d.gd<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://c26q5k5xv0rax::::res://assets/Early GameBoy.ttf<>uid://bjkc0k3qyny5p::::res://timer_label.gd<>uid://be0f6kj8lgakf::::res://custom_nodes/upgrade_orb_2d/upgrade_orb_2d.gd
 line_2d.gd::GDScript::6853596934897427183::1790927975::0::1::::<>Line2D<><>0<>0<><>::
 pause_screen.scn::PackedScene::4951822752265652916::1791636822::0::1::::<><><>0<>0<><>::uid://c65pjrbnv5oxy::::res://titlescreen/Jomolhari-Regular.ttf<>uid://diarb1bnef4i5::::res://assets/unpause.png<>uid://bhmecaesqbhqs::::res://titlescreen/play.gd<>uid://mjt53k0h6avh::::res://assets/quit.png<>uid://bihv1cg1k3vvb::::res://quit.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd
 quit.gd::GDScript::2963703680076738271::1791969642::0::1::::<>TextureButton<><>0<>0<><>::
@@ -4030,7 +4030,8 @@ button_focus.tres::StyleBoxFlat::1106322926052085743::1790450489::0::1::::<><><>
 button_hover.tres::StyleBoxFlat::2151354179275418664::1790450489::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat::2549607310371774247::1790450489::0::1::::<><><>0<>0<><>::
 theme.tres::Theme::2909626652912860453::1792840738::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
-::res://assets/::1792796617
+::res://assets/::1792841864
+ACKNOWLEDGEMENTS.md::TextFile::-1::1792841864::0::1::::<><><>0<>0<><>::
 background.png::CompressedTexture2D::435520169624724455::1790866764::1791210416::1::::<><><>0<>0<>9251fcb91e9170185a8a4d822d214e93<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
 boost_orb_disabled.png::CompressedTexture2D::745894925097023570::1791716743::1791716744::1::::<><><>0<>0<>c4e16a7fd1c31cdd981acf433c485040<>res://.godot/imported/boost_orb_disabled.png-3a499a75afb298b8a4606cbf25e28e77.ctex::
 boost_orb_enabled.png::CompressedTexture2D::6625782925579124173::1791541079::1791541084::1::::<><><>0<>0<>0d9cf0c16c9d15710d9d32b7fefa0c80<>res://.godot/imported/boost_orb_enabled.png-54f5a4b694594030e08f01033de01d46.ctex::
@@ -4047,8 +4048,10 @@ spikes.png::CompressedTexture2D::5096745375446389730::1791485358::1791484703::1:
 unpause.png::CompressedTexture2D::7721808142602641386::1790881674::1791210416::1::::<><><>0<>0<>d4d68ce09f266a1ff4bb9d9279901e17<>res://.godot/imported/unpause.png-88eecf6dec776583daccecb471519f09.ctex::
 upgrade_orb_disabled.png::CompressedTexture2D::3279221782802858045::1791450363::1791450364::1::::<><><>0<>0<>44fb770f2dafccdac6c4987b52dc5464<>res://.godot/imported/upgrade_orb_disabled.png-3c5181d0b6a07195cc379deabbfaba87.ctex::
 upgrade_orb_enabled.png::CompressedTexture2D::6186009323874900372::1791450354::1791450364::1::::<><><>0<>0<>d03a45df75b88c53fa986d137ea7e317<>res://.godot/imported/upgrade_orb_enabled.png-53434768bfe5916cf3a5806f80b15c96.ctex::
-::res://assets/audio/::1792841698
+::res://assets/audio/::1792846126
+boost_hit.ogg::AudioStreamOggVorbis::8240154797796091984::1792846115::1792846123::1::::<><><>0<>0<>351acfe46678dde026b9c3ee8ef6bd29<>res://.godot/imported/boost_hit.ogg-2d78172da37654c367160e09543f3ba1.oggvorbisstr::
 rain.ogg::AudioStreamOggVorbis::7389038021896161917::1792840277::1792840280::1::::<><><>0<>0<>5304c66d1985052913a009c4d280d1ac<>res://.godot/imported/rain.ogg-c359eacc274f0a57738849e2e701b36d.oggvorbisstr::
+upgrade_hit.ogg::AudioStreamOggVorbis::6450090656791413380::1792845687::1792845691::1::::<><><>0<>0<>1340d4ca80d8da8c8b021d970472a9c9<>res://.godot/imported/upgrade_hit.ogg-3ccd904e53c192d29ce98e556f2d3ae4.oggvorbisstr::
 water_waves.mp3::AudioStreamMP3::7570769231953819899::1792841698::1792841735::1::::<><><>0<>0<>19257f6cf2f98357d181a2b677762cb2<>res://.godot/imported/water_waves.mp3-ece4fbbdfe8ddb56e75c05ecf4fd8ef4.mp3str::
 wind.ogg::AudioStreamOggVorbis::4271983293752138782::1792796622::1792840123::1::::<><><>0<>0<>494d2ab6193e06944f26f424890c4b33<>res://.godot/imported/wind.ogg-90b6b42c0a530212d5891f9bf6c33973.oggvorbisstr::
 ::res://assets/audio/dirt/::1792841295
@@ -4060,14 +4063,15 @@ cave_terrain_fill.png::CompressedTexture2D::5245432911067405908::1791371238::179
 cave_terrain_outline.png::CompressedTexture2D::8430425292599002717::1791825078::1791825079::1::::<><><>0<>0<>e2fda0986903866143c15448a5e16ee1<>res://.godot/imported/cave_terrain_outline.png-405c8fd43cd6822a62facfac2943e5ee.ctex::
 fields_terrain_fill.png::CompressedTexture2D::6627315057170886283::1791520186::1791520198::1::::<><><>0<>0<>97ba2ee87271519cfe0d9338cde2d54b<>res://.godot/imported/fields_terrain_fill.png-dee30ef9516980c9c5e4cdccdc0f8810.ctex::
 fields_terrain_outline.png::CompressedTexture2D::4289979303395628580::1791825071::1791825079::1::::<><><>0<>0<>4b34519ac44f94176281c427ee56a9fc<>res://.godot/imported/fields_terrain_outline.png-fe4268696c675ea357bac63c9e95bb20.ctex::
-::res://custom_nodes/::1792840832
-boost_orb_2d.gd::GDScript::2917377706897823962::1791969294::0::1::::BoostOrb2D<>Area2D<><>0<>1<><>::
+::res://custom_nodes/::1792846331
+boost_orb_2d.gd::GDScript::2917377706897823962::1792846331::0::1::::BoostOrb2D<>Area2D<><>0<>1<><>::
 hint_area_2d.gd::GDScript::8513580155321688892::1790949498::0::1::::<>Area2D<><>0<>0<><>::
 player_interaction_area_2d.gd::GDScript::7384896861160545443::1791797053::0::1::::<>Area2D<><>0<>0<><>::
 polygon_deathplane_2d.gd::GDScript::6648804022591379966::1791969607::0::1::::PolygonDeathplane2D<>Polygon2D<><>0<>1<><>::
 polygon_deathplane_2d.scn::PackedScene::8070768340798703420::1790975568::0::1::::<><><>0<>0<><>::uid://c1yy3ipykmohy::::res://custom_nodes/polygon_deathplane_2d.gd
 polygon_terrain_2d.gd::GDScript::1690873191922867927::1791969622::0::1::::PolygonTerrain2D<>Polygon2D<><>0<>1<><>::
 polygon_terrain_2d.scn::PackedScene::967254684345490862::1790861136::0::1::::<><><>0<>0<><>::uid://ydco1g5gr1u6::::res://custom_nodes/polygon_terrain_2d.gd<>uid://db3qcdd8ka1bv::::res://custom_nodes/spawn_point_2d/spawn_point_2d.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd
+ambience_area_2d.gd::GDScript::7541302190612832115::1792841983::0::1::::AmbienceArea2D<>VisibleOnScreenEnabler2D<><>0<>1<><>::
 save_manager.gd::GDScript::3670838811544544446::1792791693::0::1::::<>RefCounted<><>0<>0<><>::
 save_resource.gd::GDScript::8564878243793316954::1792659037::0::1::::WindsorSaveData<>Resource<><>0<>0<><>::
 screen_object_2d.gd::GDScript::7808844641363263160::1791969765::0::1::::GameScreen2D<>VisibleOnScreenEnabler2D<><>0<>1<><>::
@@ -4076,12 +4080,12 @@ sound_resource.gd::GDScript::3910453377067497934::1792793977::0::1::::AmbienceSo
 tutorial_area.gd::GDScript::7039436577734500314::1791633495::0::1::::<>WorldArea2D<><>0<>0<><>::
 unsafe_area_2d.gd::GDScript::6355445471309475472::1792795058::0::1::::UnsafeArea2D<>Polygon2D<><>0<>1<><>::
 windsor_ambience_resource.gd::GDScript::4219934829996886963::1792796064::0::1::::Ambience<>Resource<><>0<>0<><>::
-windsor_player_2d.scn::PackedScene::4910195211286463353::1792795696::0::1::::<><><>0<>0<><>::uid://c8wo6kxiwpqm1::::res://custom_nodes/windsor_player_2d/windsor_player_2d.gd<>uid://d3hl7egvxpacs::::res://custom_nodes/windsor_player_2d/area_2d.gd
+windsor_player_2d.scn::PackedScene::4910195211286463353::1792845803::0::1::::<><><>0<>0<><>::uid://c8wo6kxiwpqm1::::res://custom_nodes/windsor_player_2d/windsor_player_2d.gd<>uid://d3hl7egvxpacs::::res://custom_nodes/windsor_player_2d/area_2d.gd
 wind_area_2d.gd::GDScript::3186587429820692530::1791633403::0::1::::WindArea2D<>Area2D<><>0<>1<><>::
-wind_texture_2d.gd::GDScript::4651106785083920591::1792840832::0::1::::AmbienceManager2D<>Sprite2D<><>0<>1<><>::
-world_area_2d.gd::GDScript::1285214632260939394::1792794079::0::1::::WorldArea2D<>VisibleOnScreenEnabler2D<><>0<>1<><>::
-::res://custom_nodes/bounce_orb_2d/::1791969495
-bounce_orb_2d.gd::GDScript::2505980978085497645::1791969495::0::1::::BounceOrb2D<>Area2D<><>0<>1<><>::
+wind_texture_2d.gd::GDScript::4651106785083920591::1792844323::0::1::::AmbienceManager2D<>Sprite2D<><>0<>1<><>::
+world_area_2d.gd::GDScript::1285214632260939394::1792842021::0::1::::WorldArea2D<>VisibleOnScreenEnabler2D<><>0<>1<><>::
+::res://custom_nodes/bounce_orb_2d/::1792846256
+bounce_orb_2d.gd::GDScript::2505980978085497645::1792846256::0::1::::BounceOrb2D<>Area2D<><>0<>1<><>::
 scale_curve_x.res::Curve::6539694735473130497::1790878148::0::1::::<><><>0<>0<><>::
 scale_curve_y.res::Curve::6061254443847113878::1790878148::0::1::::<><><>0<>0<><>::
 ::res://custom_nodes/flamebloom_2d/::1791969567
@@ -4092,10 +4096,10 @@ oneway.gd::GDScript::2945974909368549694::1791969577::0::1::::OnewayPlatform2D<>
 ::res://custom_nodes/spawn_point_2d/::1792795201
 mesh_instance_2d.gd::GDScript::7593467734625694360::1790083577::0::1::::<>RefCounted<><>0<>0<><>::
 spawn_point_2d.gd::GDScript::7288228679020308639::1792795201::0::1::::WindsorSpawnPoint2D<>Node2D<><>0<>0<><>::
-::res://custom_nodes/upgrade_orb_2d/::1792058068
+::res://custom_nodes/upgrade_orb_2d/::1792845804
 scale_curve_x.res::Curve::800242719917259226::1790865041::0::1::::<><><>0<>0<><>::
 scale_curve_y.res::Curve::7832064329562790063::1790865065::0::1::::<><><>0<>0<><>::
-upgrade_orb_2d.gd::GDScript::2719144987322655129::1792058068::0::1::::UpgradeOrb2D<>Area2D<><>0<>1<><>::
+upgrade_orb_2d.gd::GDScript::2719144987322655129::1792845804::0::1::::UpgradeOrb2D<>Area2D<><>0<>1<><>::
 ::res://custom_nodes/windsor_player_2d/::1792840479
 area_2d.gd::GDScript::9139725569895712478::1792794027::0::1::::PlayerInteractionArea2D<>Area2D<><>0<>0<><>::
 windsor_player_2d.gd::GDScript::7135395476697862410::1792840479::0::1::::WindsorPlayer2D<>CharacterBody2D<><>0<>0<><>::
@@ -4112,3 +4116,7 @@ Jomolhari-Regular.ttf::FontFile::7011554574885316862::1757524128::1790870286::1:
 play.gd::GDScript::2902761568785405334::1791967941::0::1::::<>TextureButton<><>0<>0<><>::
 title.png::CompressedTexture2D::6898111932817797106::1791568076::1791570768::1::::<><><>0<>0<>100686595034fed0435d419e49678b21<>res://.godot/imported/title.png-3bd3e8d162a01a7df5ac956b0ba4f41a.ctex::
 titlescreen.scn::PackedScene::5513346085819839344::1792840891::0::1::::<><><>0<>0<><>::uid://c5jq5po4fvxhq::::res://titlescreen/title.png<>uid://c65pjrbnv5oxy::::res://titlescreen/Jomolhari-Regular.ttf<>uid://ceedn0alp87by::::res://assets/play.png<>uid://bhmecaesqbhqs::::res://titlescreen/play.gd<>uid://qoos8kpi0pya::::res://assets/settings.png<>uid://cvjggu566tnyy::::res://titlescreen/button_2.gd<>uid://mjt53k0h6avh::::res://assets/quit.png<>uid://dd2hqn5ry85jw::::res://titlescreen/button_3.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd<>uid://ddjkm2ot5p2rx::::res://assets/audio/rain.ogg
+::res://web/::1792846422
+Windsor.apple-touch-icon.png::CompressedTexture2D::8360271086675589158::1792846422::1792846499::1::::<><><>0<>0<>5bc65969cacb3289477e1c2ea33d23f9<>res://.godot/imported/Windsor.apple-touch-icon.png-ed2345a3e1753cf9f1962bb9b852e469.ctex::
+Windsor.icon.png::CompressedTexture2D::4995587214970767245::1792846422::1792846499::1::::<><><>0<>0<>e47a70084046144f15c247aa81d2bb6e<>res://.godot/imported/Windsor.icon.png-ed0ec61a1ec7d89fa72f9140f92873c1.ctex::
+Windsor.png::CompressedTexture2D::2633893926294645210::1792846422::1792846499::1::::<><><>0<>0<>c1353320769093d4ca56b1a6a074daff<>res://.godot/imported/Windsor.png-7416bb2e27d0c4417dd5a0d9b9c957b9.ctex::
