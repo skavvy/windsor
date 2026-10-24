@@ -1,4 +1,9 @@
-/home/crphi/windsor-fields/web/
+/home/crphi/windsor-fields/exports/web/
+/home/crphi/windsor-fields/exports/android/
+res://exports/android/
+/home/crphi/windsor-fields/
+res://exports/web/
+/usr/lib/jvm/java-25-openjdk/
 /home/crphi/windsor-fields/assets/
 res://titlescreen/
 res://shaders/

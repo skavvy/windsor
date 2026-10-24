@@ -18,7 +18,7 @@ var cpu_particles: CPUParticles2D
 
 var can_pause: bool = true
 var timer_stop: bool = false
-var can_save: bool = false
+var can_save: bool = true
 
 var player_area: Area2D
 
@@ -97,23 +97,8 @@ func set_ambience(ambience: Ambience) -> void:
 
 func file_load() -> void:
 	savefile = WindsorSaveData.new()
-	savefile.reset()
 	if FileAccess.file_exists("user://windsor.save"):
-		print(FileAccess.get_file_as_string("user://windsor.save"))
-		var save = FileAccess.open_compressed("user://windsor.save", FileAccess.READ, FileAccess.COMPRESSION_ZSTD)
-		if not save:
-			savefile.reset()
-			
-			player.position = Vector2.ZERO
-			player.max_flutters = default_flutters
-			
-			player.used_orbs = [-1]
-			
-			timer_label.tick = 0
-			start_tick = Time.get_unix_time_from_system()
-			return
-		
-		savefile.deserialize(save.get_line())
+		savefile.load_file()
 		
 		player.position = savefile.spos
 		player.max_flutters = savefile.flut
@@ -143,16 +128,11 @@ func file_load() -> void:
 
 func file_save() -> void:
 	can_save = false
-	if FileAccess.file_exists("user://windsor.save"):
-		var save = FileAccess.open_compressed("user://windsor.save", FileAccess.WRITE, FileAccess.COMPRESSION_ZSTD)
-		
-		savefile.flut = player.max_flutters
-		savefile.spos = player.last_safe_position
-		savefile.orbs = player.used_orbs
-		savefile.tick = timer_label.tick
-		
-		save.store_line(savefile.serialize())
-		save.close()
+	savefile.flut = player.max_flutters
+	savefile.spos = player.last_safe_position
+	savefile.orbs = player.used_orbs
+	savefile.tick = timer_label.tick
+	savefile.save_file()
 	can_save = true
 
 var pause_screen = "res://pause_screen.scn"

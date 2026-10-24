@@ -7,12 +7,15 @@ class_name WindsorSaveData
 @export var tick: int
 
 func save_file() -> void:
-	var save_string = self.serialize()
-	FileAccess.open("user://windsor.save", FileAccess.WRITE_READ).store_line(save_string)
+	var string = self.serialize()
+	if not string == "":
+		var savefile = FileAccess.open_compressed("user://windsor.save", FileAccess.WRITE, FileAccess.COMPRESSION_FASTLZ)
+		savefile.store_line(string)
 
 func load_file() -> void:
-	var save_string = FileAccess.get_file_as_string("user://windsor.save")
-	deserialize(save_string)
+	var savefile = FileAccess.open_compressed("user://windsor.save", FileAccess.READ, FileAccess.COMPRESSION_FASTLZ)
+	var string = savefile.get_line()
+	deserialize(string)
 
 func serialize() -> String:
 	var snapped_position: Vector2i = Vector2i(
@@ -21,6 +24,9 @@ func serialize() -> String:
 	)
 	
 	spos = snapped_position
+	
+	if snapped_position == Vector2i.ZERO:
+		return ""
 	
 	return JSON.stringify(JSON.from_native(self, true))
 
@@ -32,6 +38,7 @@ func reset() -> void:
 
 func deserialize(data: String) -> void:
 	var object = JSON.to_native(JSON.parse_string(data), true)
+	print(data)
 	
 	if typeof(object) == TYPE_NIL:
 		reset()
