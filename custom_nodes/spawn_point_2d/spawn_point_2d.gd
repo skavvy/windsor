@@ -124,6 +124,9 @@ func file_load() -> void:
 				if orb.id in savefile.orbs:
 					orb.used = true
 					orb.render_sprite = false
+				else:
+					orb.used = false
+					orb.render_sprite = true
 		
 		timer_label.tick = savefile.tick
 		start_tick = Time.get_unix_time_from_system() - timer_label.tick
