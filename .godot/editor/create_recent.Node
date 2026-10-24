@@ -1,3 +1,6 @@
+AnimationPlayer
+AudioStreamPlayer
+Timer
 RayCast2D
 Area2D
 PolygonTerrain2D
@@ -10,6 +13,3 @@ WorldArea2D
 WindArea2D
 PolygonDeathplane2D
 BoostOrb2D
-GameScreen2D
-Line2D
-VisibleOnScreenEnabler2D

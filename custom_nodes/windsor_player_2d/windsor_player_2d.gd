@@ -21,25 +21,34 @@ var last_safe_position: Vector2
 
 signal dead
 
+func upgrade(flutters: int):
+	max_flutters += flutters
+
 func _physics_process(delta: float) -> void:
+	should_save = true
+	
 	if $RayCast2D.is_colliding() and $RayCast2D2.is_colliding():
 		on_edge = false
 	else:
 		on_edge = true
 	
 	var direction = Input.get_axis("game_left", "game_right")
-	
-	if is_on_floor_only():
-		should_save = true
-		if $DangerArea.has_overlapping_areas():
-			for area in $DangerArea.get_overlapping_areas():
-				if area.get_parent() is PolygonDeathplane2D:
-					should_save = false
-					break
+
+	if not is_on_floor():
+		should_save = false
+	if $DangerArea.has_overlapping_areas():
+		for area in $DangerArea.get_overlapping_areas():
+			if area.get_parent() is PolygonDeathplane2D:
+				should_save = false
+				break
+			if area.get_parent() is UnsafeArea2D:
+				should_save = false
+				break
 	if on_edge:
 		should_save = false
 	if position == Vector2.ZERO:
 		should_save = false
+	
 	if should_save:
 		last_safe_position = position
 	

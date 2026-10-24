@@ -1,5 +1,5 @@
 extends Resource
-class_name WindsorAreaAmbience
+class_name Ambience
 
 @export_group("Sky")
 @export_subgroup("Clouds")
@@ -10,3 +10,5 @@ class_name WindsorAreaAmbience
 @export var lower_sky_color: Color = Color("b9dcfb")
 @export_subgroup("Effects")
 @export var lightning: bool = false
+@export_group("Soundscape")
+@export var soundscape: AudioStream

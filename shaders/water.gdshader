@@ -23,10 +23,6 @@ float noise(vec2 uv) {
                      dot( random(uv_index + vec2(1.0,1.0) ), uv_fract - vec2(1.0,1.0) ), blur.x), blur.y) + 0.5;
 }
 
-vec2 center() {
-	return vec2(0.5, 0.5);
-}
-
 void vertex() {
 	vec2 noise_offset = vec2(noise(VERTEX + cos(TIME)), noise(VERTEX + sin(TIME)));
 	noise_offset.y = mix(-1.0, 2.0, noise_offset.y) * wave_strength;

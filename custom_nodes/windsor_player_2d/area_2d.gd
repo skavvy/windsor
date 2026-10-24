@@ -31,7 +31,7 @@ func send_signal(emit: String) -> void:
 	else:
 		push_error("Signal ", emit, " doesn't exist!")
 
-func set_ambience(ambience: WindsorAreaAmbience) -> void:
+func set_ambience(ambience: Ambience) -> void:
 	assert(get_parent().get_parent() is WindsorSpawnPoint2D)
 	var spawnpoint: WindsorSpawnPoint2D = get_parent().get_parent()
 	spawnpoint.set_ambience(ambience)
@@ -40,7 +40,7 @@ func upgrade(amount: int, sender_id: int) -> void:
 	assert(get_parent() is WindsorPlayer2D)
 	var player: WindsorPlayer2D = get_parent()
 	player.used_orbs.append(sender_id)
-	player.max_flutters += amount
+	player.upgrade(amount)
 
 func reset_to(amount: int) -> void:
 	assert(get_parent() is WindsorPlayer2D)

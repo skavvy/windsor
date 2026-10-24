@@ -2,13 +2,22 @@
 extends Sprite2D
 class_name AmbienceManager2D
 
-@export var ambience: WindsorAreaAmbience = WindsorAreaAmbience.new()
+@export var ambience: Ambience = Ambience.new()
 var lightning_cooldown: Timer
 var lightning_decider: RandomNumberGenerator
-
-var real_ambience: WindsorAreaAmbience = WindsorAreaAmbience.new()
+@onready var real_ambience: Ambience = Ambience.new()
+var main_audio_player: AudioStreamPlayer
+var fade_audio_player: AudioStreamPlayer
 
 func _ready() -> void:
+	if not Engine.is_editor_hint():
+		main_audio_player = AudioStreamPlayer.new()
+		add_child(main_audio_player)
+		main_audio_player.autoplay = true
+		main_audio_player.playing = true
+		fade_audio_player = AudioStreamPlayer.new()
+		add_child(fade_audio_player)
+	
 	z_index = -10
 	texture = PlaceholderTexture2D.new()
 	lightning_decider = RandomNumberGenerator.new()
@@ -24,7 +33,7 @@ func _ready() -> void:
 	material.set_shader_parameter("up_color", real_ambience.lower_sky_color)
 	material.set_shader_parameter("cloud_color", real_ambience.cloud_color)
 	
-	real_ambience = WindsorAreaAmbience.new()
+	real_ambience = Ambience.new()
 	
 	await flash()
 
@@ -60,6 +69,14 @@ func flash() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if not main_audio_player:
+		main_audio_player = AudioStreamPlayer.new()
+		add_child(main_audio_player)
+		main_audio_player.autoplay = true
+		main_audio_player.playing = true
+		fade_audio_player = AudioStreamPlayer.new()
+		add_child(fade_audio_player)
+		
 	real_ambience.cloud_color.r = move_toward(real_ambience.cloud_color.r, ambience.cloud_color.r, 0.05)
 	real_ambience.cloud_color.g = move_toward(real_ambience.cloud_color.g, ambience.cloud_color.g, 0.05)
 	real_ambience.cloud_color.b = move_toward(real_ambience.cloud_color.b, ambience.cloud_color.b, 0.05)
@@ -82,6 +99,13 @@ func _process(_delta: float) -> void:
 		scale = get_viewport_rect().size * 4
 		position.x = -scale.x / 2
 		position.y = -scale.y / 2
+	
+	if not main_audio_player.stream == ambience.soundscape:
+		var timestamp = main_audio_player.get_playback_position()
+		main_audio_player.stream = ambience.soundscape
+		main_audio_player.play(timestamp)
+	if not main_audio_player.playing:
+		main_audio_player.play()
 	
 	material.set_shader_parameter("wind_speed", real_ambience.cloud_speed)
 	material.set_shader_parameter("down_color", real_ambience.upper_sky_color)

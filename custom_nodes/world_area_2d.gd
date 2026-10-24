@@ -2,7 +2,7 @@
 extends VisibleOnScreenEnabler2D
 class_name WorldArea2D
 
-@export var ambience: WindsorAreaAmbience
+@export var ambience: Ambience
 var area: Area2D
 var collision: CollisionShape2D
 
@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 	area.position = (rect.position + rect.end) / 2
 	collision.shape.size = rect.size
 	enable_node_path = get_path()
-	for thing in area.get_overlapping_areas():
-		if thing.has_method("set_ambience"):
-			thing.set_ambience(ambience)
+	if ambience:
+		for thing in area.get_overlapping_areas():
+			if thing.has_method("set_ambience"):
+				thing.set_ambience(ambience)

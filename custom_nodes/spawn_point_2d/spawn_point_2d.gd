@@ -8,19 +8,23 @@ class_name WindsorSpawnPoint2D
 @export var enabled: bool = true
 @export var default_flutters: int = 0
 @export var orbs: Node2D
+@export var timer_label: Label
+var savefile: WindsorSaveData
 var player: WindsorPlayer2D
 var attached_debugger: WindsorDebugger
+var start_tick:	int = 0
 
 var cpu_particles: CPUParticles2D
 
-var save_data: WindsorSaveData = WindsorSaveData.new()
-var save_file: FileAccess
 var can_pause: bool = true
+var timer_stop: bool = false
+var can_save: bool = false
 
 var player_area: Area2D
 
 func respawn() -> void:
 	if enabled:
+		can_save = false
 		can_pause = false
 		player.disconnect("dead", respawn)
 		player.queue_free()
@@ -55,116 +59,105 @@ func respawn() -> void:
 		#endregion
 		
 		add_child(cpu_particles)
-		
 		cpu_particles.emitting = true
 		
 		await get_tree().create_timer(0.5).timeout
 		
 		player = preload("res://custom_nodes/windsor_player_2d.scn").instantiate()
 		add_child(player)
-
-		player.spawn_position = global_position
-		player.global_position = global_position
-		player.max_flutters = default_flutters
-		
-		if FileAccess.file_exists("user://windsor.save"):
-			load_game()
-
 		player.connect("dead", respawn)
 		
 		phantom_camera.follow_target = player
 		
 		can_pause = true
+		
+		file_load()
+		can_save = true
 
 func _ready() -> void:
 	if not enabled:
 		queue_free()
 		return
 	
+	can_save = false
 	can_pause = false
 	player = preload("res://custom_nodes/windsor_player_2d.scn").instantiate()
 	add_child(player)
-
-	player.spawn_position = global_position
-	if FileAccess.file_exists("user://windsor.save"):
-		if FileAccess.get_file_as_string("user://windsor.save").is_empty():
-			player.global_position = global_position
-			player.max_flutters = default_flutters
-		else:
-			load_game()
-	else:
-		player.global_position = global_position
-		player.max_flutters = default_flutters
-	
 
 	player.connect("dead", respawn)
 	
 	phantom_camera.follow_target = player
 	can_pause = true
-
-func save_game() -> void:
-	if player:
-		save_file = FileAccess.open("user://windsor.save", FileAccess.WRITE)
 	
-		save_data.safe_position = player.last_safe_position
-		save_data.flutters = player.max_flutters
-		save_data.unlocked_orbs = player.used_orbs
-	
-		save_file.store_buffer(save_data.serialize())
-		save_file.flush()
-		save_file.close()
+	file_load()
+	can_save = true
 
-func autosave_game() -> void:
-	if player:
-		save_file = FileAccess.open("user://windsor.save", FileAccess.WRITE)
-		save_data.safe_position = player.last_safe_position
-		save_data.flutters = player.max_flutters
-		save_data.unlocked_orbs = player.used_orbs
-		
-		save_file = FileAccess.open("user://windsor.save", FileAccess.WRITE)
-		save_file.store_buffer(save_data.serialize())
-		save_file.flush()
-		save_file.close()
-		
-		save_file = FileAccess.open("user://windsor.save", FileAccess.READ)
-		print(save_file.get_as_text())
-		save_file.close()
-
-func set_ambience(ambience: WindsorAreaAmbience) -> void:
+func set_ambience(ambience: Ambience) -> void:
 	ambience_manager.ambience = ambience
 
-func load_game() -> void:
-	real_camera.position = player.position
-	phantom_camera.position = player.position
-	
-	save_file = FileAccess.open("user://windsor.save", FileAccess.READ)
-	var save_string = FileAccess.get_file_as_bytes("user://windsor.save")
-	
-	if attached_debugger:
-		save_data = attached_debugger.savefile
-		save_string = attached_debugger.savefile.serialize()
-		print(save_data.serialize())
-	else:
-		save_string = save_file.get_as_text()
-		save_data.deserialize(FileAccess.get_file_as_bytes("user://windsor.save")) 
+func file_load() -> void:
+	savefile = WindsorSaveData.new()
+	savefile.reset()
+	if FileAccess.file_exists("user://windsor.save"):
+		print(FileAccess.get_file_as_string("user://windsor.save"))
+		var save = FileAccess.open_compressed("user://windsor.save", FileAccess.READ, FileAccess.COMPRESSION_ZSTD)
+		if not save:
+			savefile.reset()
+			
+			player.position = Vector2.ZERO
+			player.max_flutters = default_flutters
+			
+			player.used_orbs = [-1]
+			
+			timer_label.tick = 0
+			start_tick = Time.get_unix_time_from_system()
+			return
 		
-	if not save_string.is_empty():
-		player.position = save_data.safe_position
-		player.max_flutters = save_data.flutters
+		savefile.deserialize(save.get_line())
 		
-		var used_orbs: Array = save_data.unlocked_orbs
-		player.used_orbs = used_orbs
+		player.position = savefile.spos
+		player.max_flutters = savefile.flut
 		
+		player.used_orbs = savefile.orbs
 		for orb in orbs.get_children():
-			if save_data.unlocked_orbs.has(orb.id):
-				orb.used = true
-				orb.render_sprite = false
+			if orb is UpgradeOrb2D:
+				if orb.id in savefile.orbs:
+					orb.used = true
+					orb.render_sprite = false
+		
+		timer_label.tick = savefile.tick
+		start_tick = Time.get_unix_time_from_system() - timer_label.tick
+	else:
+		savefile.reset()
+		
+		player.position = Vector2.ZERO
+		player.max_flutters = default_flutters
+		
+		player.used_orbs = [-1]
+		
+		timer_label.tick = 0
+		start_tick = Time.get_unix_time_from_system()
+
+func file_save() -> void:
+	can_save = false
+	if FileAccess.file_exists("user://windsor.save"):
+		var save = FileAccess.open_compressed("user://windsor.save", FileAccess.WRITE, FileAccess.COMPRESSION_ZSTD)
+		
+		savefile.flut = player.max_flutters
+		savefile.spos = player.last_safe_position
+		savefile.orbs = player.used_orbs
+		savefile.tick = timer_label.tick
+		
+		save.store_line(savefile.serialize())
+		save.close()
+	can_save = true
 
 var pause_screen = "res://pause_screen.scn"
 
 func _process(delta: float) -> void:
 	if enabled:
-		autosave_game()
+		timer_label.tick = Time.get_unix_time_from_system() - start_tick
+		if player and can_save:
+			file_save()
 		if Input.is_action_just_pressed("game_pause") and can_pause:
-			save_game()
 			get_tree().change_scene_to_file(pause_screen)
