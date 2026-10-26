@@ -14,8 +14,13 @@ func save_file() -> void:
 
 func load_file() -> void:
 	var savefile = FileAccess.open_compressed("user://windsor.save", FileAccess.READ, FileAccess.COMPRESSION_FASTLZ)
-	var string = savefile.get_line()
-	deserialize(string)
+	if not savefile:
+		var writeto = FileAccess.open_compressed("user://windsor.save", FileAccess.WRITE, FileAccess.COMPRESSION_FASTLZ)
+		writeto.close()
+		reset()
+	else:
+		var string = savefile.get_line()
+		deserialize(string)
 
 func serialize() -> String:
 	var snapped_position: Vector2i = Vector2i(

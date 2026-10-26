@@ -15,4 +15,4 @@ func _process(_delta: float) -> void:
 
 func area_exited(exiting_area: Area2D):
 	if exiting_area.has_method("reset_to"):
-		exiting_area.reset_to(2)
+		exiting_area.reset_to(3)

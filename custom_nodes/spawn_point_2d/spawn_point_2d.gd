@@ -71,6 +71,8 @@ func respawn() -> void:
 		
 		can_pause = true
 		
+		phantom_camera.teleport_position()
+		
 		file_load()
 		can_save = true
 
@@ -88,6 +90,8 @@ func _ready() -> void:
 	
 	phantom_camera.follow_target = player
 	can_pause = true
+	
+	phantom_camera.teleport_position()
 	
 	file_load()
 	can_save = true
@@ -144,3 +148,28 @@ func _process(delta: float) -> void:
 			file_save()
 		if Input.is_action_just_pressed("game_pause") and can_pause:
 			get_tree().change_scene_to_file(pause_screen)
+		if Input.is_action_just_pressed("game_reset"):
+			if player:
+				player.position = Vector2.ZERO
+				player.max_flutters = 0
+				player.flutters_midair = 0
+				player.used_orbs = [-1]
+				player.squash_and_stretch = 0
+				player.velocity = Vector2.ZERO
+				phantom_camera.teleport_position()
+				timer_label.tick = 0
+				start_tick = Time.get_unix_time_from_system()
+				savefile.reset()
+				savefile.save_file()
+				savefile.load_file()
+			else:
+				timer_label.tick = 0
+				start_tick = Time.get_unix_time_from_system()
+				savefile.reset()
+				savefile.save_file()
+				savefile.load_file()
+			for orb in orbs.get_children():
+				if orb is UpgradeOrb2D:
+					orb.used = false
+					orb.render_sprite = true
+					orb.queue_redraw()

@@ -1,3 +1,10 @@
+Label
+HBoxContainer
+VBoxContainer
+MarginContainer
+HSlider
+Container
+TabContainer
 Button
 AnimationPlayer
 AudioStreamPlayer
@@ -5,11 +12,3 @@ Timer
 RayCast2D
 Area2D
 PolygonTerrain2D
-Polygon2D
-UpgradeOrb2D
-Label
-CPUParticles2D
-AmbienceManager2D
-WorldArea2D
-WindArea2D
-PolygonDeathplane2D
