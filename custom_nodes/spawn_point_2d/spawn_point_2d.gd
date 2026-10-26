@@ -143,7 +143,10 @@ var pause_screen = "res://pause_screen.scn"
 
 func _process(delta: float) -> void:
 	if enabled:
-		timer_label.tick = Time.get_unix_time_from_system() - start_tick
+		if not timer_stop:
+			timer_label.tick = Time.get_unix_time_from_system() - start_tick
+		else:
+			pass
 		if player and can_save:
 			file_save()
 		if Input.is_action_just_pressed("game_pause") and can_pause:

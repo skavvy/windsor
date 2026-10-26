@@ -63,9 +63,9 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity += gravity/10 * delta
 		if not can_pound:
-			velocity.y += -JUMP_VELOCITY*0.2
-			if velocity.y > -JUMP_VELOCITY * 2:
-				velocity.y = -JUMP_VELOCITY * 2
+			velocity.y += -JUMP_VELOCITY*0.15
+			if velocity.y > -JUMP_VELOCITY * 3:
+				velocity.y = -JUMP_VELOCITY * 3
 
 	if Input.is_action_just_pressed("game_down") and not is_on_floor() and can_pound:
 		can_pound = false
@@ -74,7 +74,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		can_pound = true
 		if Input.is_action_just_pressed("game_jump"):
-			velocity.x = (get_wall_normal().x * (-JUMP_VELOCITY / 2)) + ((velocity.y / 1.5) * get_wall_normal().x)
+			velocity.x = (get_wall_normal().x * (-JUMP_VELOCITY / 2)) + ((velocity.y / 1.5) * get_wall_normal().x) * 1.5
 			velocity.y = JUMP_VELOCITY / 2
 	
 	if is_on_floor():

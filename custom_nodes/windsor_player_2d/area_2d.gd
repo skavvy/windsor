@@ -7,11 +7,9 @@ func _process(_delta: float) -> void:
 	is_green_this_frame = false
 	if has_overlapping_areas():
 		for area: Area2D in get_overlapping_areas():
-			if area.get_parent().name.contains("end"):
+			if area.get_parent().name.contains("[end]"):
 				if not area.is_connected("area_exited", ended):
-					var err: Error = area.connect("area_exited", ended)
-					if err != Error.OK:
-						push_error("Area exit failed to connect!")
+					area.connect("area_exited", ended)
 			if area.get_parent().name.contains("Area"):
 				assert(get_parent().get_parent() is WindsorSpawnPoint2D)
 				var spawnpoint: WindsorSpawnPoint2D = get_parent().get_parent()
@@ -19,7 +17,6 @@ func _process(_delta: float) -> void:
 
 func ended(area: Area2D) -> void:
 	if area == self:
-		assert(get_parent().get_parent() is WindsorSpawnPoint2D)
 		var spawnpoint: WindsorSpawnPoint2D = get_parent().get_parent()
 		spawnpoint.timer_stop = true
 
