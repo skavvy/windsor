@@ -3,7 +3,7 @@ extends Polygon2D
 class_name PolygonTerrain2D
 
 @export var show_collision: bool = true
-@export_enum("Caves", "Fields", "Snowday") var style: String = "Caves"
+@export_enum("Caves", "Fields", "Ruins") var style: String = "Caves"
 
 var inline: Line2D
 var static_body: StaticBody2D
@@ -37,9 +37,14 @@ func _ready() -> void:
 		outline_color = Color("f0b541")
 	elif style == "Fields":
 		texture = preload("res://assets/terrain/fields_terrain_fill.png")
-		inline.texture = load("res://assets/terrain/fields_terrain_outline.png")
+		inline.texture = preload("res://assets/terrain/fields_terrain_outline.png")
 		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 		outline_color = Color("c8d45d")
+	elif style == "Ruins":
+		texture = preload("res://assets/terrain/ruins_terrain_fill.png")
+		inline.texture = preload("res://assets/terrain/ruins_terrain_outline.png")
+		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+		outline_color = Color("ff8933")
 
 func _process(_delta: float) -> void:
 	if not Engine.is_editor_hint():
@@ -55,9 +60,14 @@ func _process(_delta: float) -> void:
 		outline_color = Color("f0b541")
 	elif style == "Fields":
 		texture = preload("res://assets/terrain/fields_terrain_fill.png")
-		inline.texture = load("res://assets/terrain/fields_terrain_outline.png")
+		inline.texture = preload("res://assets/terrain/fields_terrain_outline.png")
 		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 		outline_color = Color("c8d45d")
+	elif style == "Ruins":
+		texture = preload("res://assets/terrain/ruins_terrain_fill.png")
+		inline.texture = preload("res://assets/terrain/ruins_terrain_outline.png")
+		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
+		outline_color = Color("ff8933")
 	
 	if show_collision:
 		collision_polygon.show()

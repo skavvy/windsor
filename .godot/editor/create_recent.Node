@@ -1,3 +1,4 @@
+PolygonTerrain2D
 Label
 HBoxContainer
 VBoxContainer
@@ -11,4 +12,3 @@ AudioStreamPlayer
 Timer
 RayCast2D
 Area2D
-PolygonTerrain2D
