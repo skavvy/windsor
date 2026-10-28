@@ -1,7 +1,7 @@
+PolygonTerrain2D
 VirtualJoystick
 AmbienceArea2D
 BounceOrb2D
-PolygonTerrain2D
 CPUParticles2D
 CollisionShape2D
 UnsafeArea2D
@@ -12,4 +12,3 @@ CanvasGroup
 Sprite2D
 UpgradeOrb2D
 PolygonDeathplane2D
-WindArea2D

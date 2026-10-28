@@ -1,12 +1,12 @@
 3e2cc9f74922c2592e3236b3f5b5179c
-::res://::1793179132
+::res://::1793182506
 debugger.gd::GDScript::2490682698519721889::1791969542::0::1::::WindsorDebugger<>Node<><>0<>1<><>::
 default_bus_layout.tres::AudioBusLayout::5794130599311707859::1792839868::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1793086993::0::1::::<><><>0<>0<><>::
 global_save.gd::GDScript::3770265045954216499::1793174133::0::1::::SaveManager<>Node<><>0<>0<><>::
 icon.png::CompressedTexture2D::5173499482193107828::1791528626::1791531871::1::::<><><>0<>0<>6b13e1e4531271ca39cbf0c1f54fc34f<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 layer1.png::CompressedTexture2D::8370647087894757240::1791398714::1791398716::1::::<><><>0<>0<>f2d534160ef73540c2aeef40dd39e125<>res://.godot/imported/layer1.png-791900019db5590838ed9db21f733cef.ctex::
-layer1.scn::PackedScene::45851702904883408::1793175433::0::1::::<><><>0<>0<><>::uid://bbqrgeiwx086h::::res://debugger.gd<>uid://dua5j8dcv80io::::res://custom_nodes/save_resource.gd<>uid://db3qcdd8ka1bv::::res://custom_nodes/spawn_point_2d/spawn_point_2d.gd<>uid://dech2pxyj2cqp::::res://level_terrain.gd<>uid://dri2lm078k833::::res://layer1.png<>uid://c7j7qyya3pca1::::res://custom_nodes/tutorial_area.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd<>uid://b14m68pn8vf8q::::res://assets/audio/wind.ogg<>uid://ddjkm2ot5p2rx::::res://assets/audio/rain.ogg<>uid://ceu5wfmarvmhm::::res://assets/spikes.png<>uid://c1yy3ipykmohy::::res://custom_nodes/polygon_deathplane_2d.gd<>uid://cgy6rp2ulbkye::::res://assets/terrain/cave_terrain_fill.png<>uid://ydco1g5gr1u6::::res://custom_nodes/polygon_terrain_2d.gd<>uid://cwsvi1w8qph73::::res://custom_nodes/unsafe_area_2d.gd<>uid://cdynqttisvgyc::::res://shaders/wave.gdshader<>uid://bbx6e1rnaeld2::::res://custom_nodes/bounce_orb_2d/bounce_orb_2d.gd<>uid://blnuvnub0qln3::::res://custom_nodes/wind_area_2d.gd<>uid://dfpce67ex6wyd::::res://custom_nodes/ambience_area_2d.gd<>uid://be0f6kj8lgakf::::res://custom_nodes/upgrade_orb_2d/upgrade_orb_2d.gd<>uid://sktkdt8kcbos::::res://custom_nodes/world_area_2d.gd<>uid://c1ok572jvhlhj::::res://assets/terrain/fields_terrain_fill.png<>uid://ckr8ijicx8byj::::res://shaders/water.gdshader<>uid://bhtg1w84crpaw::::res://custom_nodes/boost_orb_2d.gd<>uid://df4lp0nscw1u2::::res://assets/audio/water_waves.mp3<>uid://bx0axlieq3kxu::::res://assets/terrain/ruins_terrain_fill.png<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://c26q5k5xv0rax::::res://assets/Early GameBoy.ttf<>uid://bjkc0k3qyny5p::::res://timer_label.gd<>uid://cossxkx7jqrqo::::res://assets/joyarea.png<>uid://b86u4wyrbs6t7::::res://assets/joystick.png<>uid://sfyhqo71tgdo::::res://mobile_only.gd<>uid://kusjgnemxbby::::res://assets/up_button.png<>uid://ciicjq7awd8a2::::res://simulator_button.gd<>uid://cd25j5i0ckp1h::::res://assets/down_button.png<>uid://b5bawytluy0e2::::res://assets/pause_button.png
+layer1.scn::PackedScene::45851702904883408::1793181017::0::1::::<><><>0<>0<><>::uid://bbqrgeiwx086h::::res://debugger.gd<>uid://dua5j8dcv80io::::res://custom_nodes/save_resource.gd<>uid://db3qcdd8ka1bv::::res://custom_nodes/spawn_point_2d/spawn_point_2d.gd<>uid://dech2pxyj2cqp::::res://level_terrain.gd<>uid://dri2lm078k833::::res://layer1.png<>uid://c7j7qyya3pca1::::res://custom_nodes/tutorial_area.gd<>uid://b1efye5fmknvf::::res://custom_nodes/windsor_ambience_resource.gd<>uid://b14m68pn8vf8q::::res://assets/audio/wind.ogg<>uid://ddjkm2ot5p2rx::::res://assets/audio/rain.ogg<>uid://ceu5wfmarvmhm::::res://assets/spikes.png<>uid://c1yy3ipykmohy::::res://custom_nodes/polygon_deathplane_2d.gd<>uid://cgy6rp2ulbkye::::res://assets/terrain/cave_terrain_fill.png<>uid://ydco1g5gr1u6::::res://custom_nodes/polygon_terrain_2d.gd<>uid://cwsvi1w8qph73::::res://custom_nodes/unsafe_area_2d.gd<>uid://cdynqttisvgyc::::res://shaders/wave.gdshader<>uid://bbx6e1rnaeld2::::res://custom_nodes/bounce_orb_2d/bounce_orb_2d.gd<>uid://blnuvnub0qln3::::res://custom_nodes/wind_area_2d.gd<>uid://dfpce67ex6wyd::::res://custom_nodes/ambience_area_2d.gd<>uid://be0f6kj8lgakf::::res://custom_nodes/upgrade_orb_2d/upgrade_orb_2d.gd<>uid://sktkdt8kcbos::::res://custom_nodes/world_area_2d.gd<>uid://c1ok572jvhlhj::::res://assets/terrain/fields_terrain_fill.png<>uid://ckr8ijicx8byj::::res://shaders/water.gdshader<>uid://bhtg1w84crpaw::::res://custom_nodes/boost_orb_2d.gd<>uid://df4lp0nscw1u2::::res://assets/audio/water_waves.mp3<>uid://bx0axlieq3kxu::::res://assets/terrain/ruins_terrain_fill.png<>uid://bhexx6mj1xv3q::::res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd<>uid://8umksf8e80fw::::res://addons/phantom_camera/scripts/resources/tween_resource.gd<>uid://bd046eokvcnu2::::res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd<>uid://cxm2hjsxen0mw::::res://shaders/sky.gdshader<>uid://b7jbbw5l7ey04::::res://custom_nodes/wind_texture_2d.gd<>uid://c26q5k5xv0rax::::res://assets/Early GameBoy.ttf<>uid://bjkc0k3qyny5p::::res://timer_label.gd<>uid://cossxkx7jqrqo::::res://assets/joyarea.png<>uid://b86u4wyrbs6t7::::res://assets/joystick.png<>uid://sfyhqo71tgdo::::res://mobile_only.gd<>uid://kusjgnemxbby::::res://assets/up_button.png<>uid://ciicjq7awd8a2::::res://simulator_button.gd<>uid://cd25j5i0ckp1h::::res://assets/down_button.png<>uid://b5bawytluy0e2::::res://assets/pause_button.png
 level_terrain.gd::GDScript::7444620241008644703::1793175433::0::1::::LevelTerrain<>Node2D<><>0<>1<><>::
 line_2d.gd::GDScript::6853596934897427183::1790927975::0::1::::<>Line2D<><>0<>0<><>::
 mobile_only.gd::GDScript::1275191646128907460::1792858472::0::1::::<>Control<><>0<>1<><>::
@@ -4031,11 +4031,11 @@ phantom_camera_noise_2d.gd::GDScript::7746826514819894941::1790450489::0::1::::P
 phantom_camera_noise_3d.gd::GDScript::6187281538235516492::1790450489::0::1::::PhantomCameraNoise3D<>Resource<>res://addons/phantom_camera/icons/phantom_camera_noise_resource.svg<>0<>1<><>::
 tween_director_resource.gd::GDScript::1896363988711138719::1790450489::0::1::::TweenDirectorResource<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween_director_resource.svg<>0<>1<><>::
 tween_resource.gd::GDScript::2358266811638875852::1790450489::0::1::::PhantomCameraTween<>Resource<>res://addons/phantom_camera/icons/phantom_camera_tween.svg<>0<>0<><>::
-::res://addons/phantom_camera/themes/::1793173759
+::res://addons/phantom_camera/themes/::1793180609
 button_focus.tres::StyleBoxFlat::1106322926052085743::1790450489::0::1::::<><><>0<>0<><>::
 button_hover.tres::StyleBoxFlat::2151354179275418664::1790450489::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat::2549607310371774247::1790450489::0::1::::<><><>0<>0<><>::
-theme.tres::Theme::2909626652912860453::1793173759::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
+theme.tres::Theme::2909626652912860453::1793180609::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
 ::res://assets/::1792924127
 ACKNOWLEDGEMENTS.md::TextFile::-1::1792846816::0::1::::<><><>0<>0<><>::
 background.png::CompressedTexture2D::435520169624724455::1790866764::1791210416::1::::<><><>0<>0<>9251fcb91e9170185a8a4d822d214e93<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
@@ -4106,9 +4106,9 @@ flamebloom.res::SpriteFrames::2842445151348654162::1791045000::0::1::::<><><>0<>
 flamebloom_2d.gd::GDScript::7402881852215351253::1791969567::0::1::::Flamebloom2D<>Node2D<><>0<>1<><>::
 ::res://custom_nodes/oneway_platform_2d/::1791969577
 oneway.gd::GDScript::2945974909368549694::1791969577::0::1::::OnewayPlatform2D<>StaticBody2D<>res://addons/at-icons/node2d/arrow_up_to_line.svg<>0<>1<><>::
-::res://custom_nodes/spawn_point_2d/::1793174048
+::res://custom_nodes/spawn_point_2d/::1793180876
 mesh_instance_2d.gd::GDScript::7593467734625694360::1790083577::0::1::::<>RefCounted<><>0<>0<><>::
-spawn_point_2d.gd::GDScript::7288228679020308639::1793174048::0::1::::WindsorSpawnPoint2D<>Node2D<>uid://uwrtqboyla0v<>0<>0<><>::
+spawn_point_2d.gd::GDScript::7288228679020308639::1793180876::0::1::::WindsorSpawnPoint2D<>Node2D<>uid://uwrtqboyla0v<>0<>0<><>::
 ::res://custom_nodes/upgrade_orb_2d/::1793175278
 scale_curve_x.res::Curve::800242719917259226::1790865041::0::1::::<><><>0<>0<><>::
 scale_curve_y.res::Curve::7832064329562790063::1790865065::0::1::::<><><>0<>0<><>::
@@ -4138,10 +4138,10 @@ master_volume.gd::GDScript::1405566680954149624::1792919131::0::1::::<>HSlider<>
 settings.scn::PackedScene::7220295977753163266::1792919161::0::1::::<><><>0<>0<><>::uid://c26q5k5xv0rax::::res://assets/Early GameBoy.ttf<>uid://cs4q8go63hrcq::::res://settings/slider_drag.png<>uid://ua4qiotrs5hs::::res://settings/master_volume.gd
 slider_background.png::CompressedTexture2D::1465019930368426399::1792870259::1792870260::1::::<><><>0<>0<>099af3c84f6d9fed363b64873e355647<>res://.godot/imported/slider_background.png-bfd7c12d491967922888a02f9f362b27.ctex::
 slider_drag.png::CompressedTexture2D::6097138249035216624::1792869989::1792869991::1::::<><><>0<>0<>d3e480a78e28848b48ef16f570a0a75d<>res://.godot/imported/slider_drag.png-bc615a45d1c350c4b926dc5497e66ac5.ctex::
-::res://shaders/::1793173759
-sky.gdshader::Shader::6413609665039224218::1793173759::0::1::::<><><>0<>0<><>::
-water.gdshader::Shader::5511842657889566837::1793173759::0::1::::<><><>0<>0<><>::
-wave.gdshader::Shader::5033771885689483474::1793173759::0::1::::<><><>0<>0<><>::
+::res://shaders/::1793180609
+sky.gdshader::Shader::6413609665039224218::1793180609::0::1::::<><><>0<>0<><>::
+water.gdshader::Shader::5511842657889566837::1793180609::0::1::::<><><>0<>0<><>::
+wave.gdshader::Shader::5033771885689483474::1793180609::0::1::::<><><>0<>0<><>::
 ::res://titlescreen/::1792854157
 button_2.gd::GDScript::6265762598553270884::1791967932::0::1::::<>TextureButton<><>0<>0<><>::
 button_3.gd::GDScript::7426021102958348520::1791967950::0::1::::<>TextureButton<><>0<>0<><>::

@@ -36,7 +36,7 @@ func set_ambience(ambience: Ambience) -> void:
 func upgrade(amount: int, sender_id: int) -> void:
 	assert(get_parent() is WindsorPlayer2D)
 	var player: WindsorPlayer2D = get_parent()
-	player.used_orbs.append(sender_id)
+	GlobalSave.orb_collected(sender_id)
 	player.upgrade(amount)
 
 func reset_to(amount: int) -> void:

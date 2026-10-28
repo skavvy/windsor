@@ -9,7 +9,6 @@ var squash_and_stretch = 0.0
 var can_pound = true
 var can_jump_again = false
 var flutters_midair: float = 0
-var used_orbs: Array = [-1]
 var on_edge: bool = false
 var should_save: bool = true
 

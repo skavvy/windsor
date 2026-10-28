@@ -2,6 +2,7 @@ extends Resource
 class_name WindsorSaveData
 
 @export var orbs: PackedInt32Array
+@export var door: PackedInt32Array
 @export var spos: Vector2
 @export var flut: int
 @export var tick: int
@@ -37,6 +38,7 @@ func serialize() -> String:
 
 func reset() -> void:
 	self.orbs = []
+	self.door = []
 	self.flut = 0
 	self.spos = Vector2(0, 0)
 	self.tick = 0
@@ -49,6 +51,7 @@ func deserialize(data: String) -> void:
 		reset()
 	else:
 		orbs = object.orbs
+		door = object.door
 		spos = object.spos
 		flut = object.flut
 		tick = object.tick

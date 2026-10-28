@@ -101,8 +101,6 @@ func file_load() -> void:
 	GlobalSave.load_from_file()
 	player.position = GlobalSave.savefile.spos
 	player.max_flutters = GlobalSave.savefile.flut
-	
-	player.used_orbs = GlobalSave.savefile.orbs
 	for area in $"/root/Layer 1/Terrain".get_children():
 			for child in area.get_children():
 				if child is UpgradeOrb2D:
@@ -122,7 +120,6 @@ func file_save() -> void:
 	can_save = false
 	GlobalSave.savefile.flut = player.max_flutters
 	GlobalSave.savefile.spos = player.last_safe_position
-	GlobalSave.savefile.orbs = player.used_orbs
 	GlobalSave.savefile.tick = timer_label.tick
 	GlobalSave.save_to_file()
 	can_save = true
@@ -142,9 +139,8 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("game_reset"):
 			if player:
 				player.position = Vector2.ZERO
-				player.max_flutters = 0
+				player.max_flutters = default_flutters
 				player.flutters_midair = 0
-				player.used_orbs = [-1]
 				player.squash_and_stretch = 0
 				player.velocity = Vector2.ZERO
 				phantom_camera.teleport_position()
