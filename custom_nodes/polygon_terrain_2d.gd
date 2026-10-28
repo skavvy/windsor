@@ -44,7 +44,7 @@ func _ready() -> void:
 		texture = preload("res://assets/terrain/ruins_terrain_fill.png")
 		inline.texture = preload("res://assets/terrain/ruins_terrain_outline.png")
 		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
-		outline_color = Color("ff8933")
+		outline_color = Color("ff5277")
 
 func _process(_delta: float) -> void:
 	if not Engine.is_editor_hint():
@@ -67,7 +67,7 @@ func _process(_delta: float) -> void:
 		texture = preload("res://assets/terrain/ruins_terrain_fill.png")
 		inline.texture = preload("res://assets/terrain/ruins_terrain_outline.png")
 		texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
-		outline_color = Color("ff8933")
+		outline_color = Color("ff5277")
 	
 	if show_collision:
 		collision_polygon.show()
