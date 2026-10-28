@@ -7,7 +7,6 @@ class_name WindsorSpawnPoint2D
 @export var real_camera: Camera2D
 @export var enabled: bool = true
 @export var default_flutters: int = 0
-@export var orbs: Node2D
 @export var timer_label: Label
 var savefile: WindsorSaveData
 var player: WindsorPlayer2D
@@ -108,14 +107,17 @@ func file_load() -> void:
 		player.max_flutters = savefile.flut
 		
 		player.used_orbs = savefile.orbs
-		for orb in orbs.get_children():
-			if orb is UpgradeOrb2D:
-				if orb.id in savefile.orbs:
-					orb.used = true
-					orb.render_sprite = false
-				else:
-					orb.used = false
-					orb.render_sprite = true
+		for area in $"/root/Layer 1/Terrain".get_children():
+				for child in area.get_children():
+					if child is UpgradeOrb2D:
+						if child.id in savefile.orbs:
+							child.used = true
+							child.render_sprite = false
+							child.queue_redraw()
+						else:
+							child.used = false
+							child.render_sprite = true
+							child.queue_redraw()
 		
 		timer_label.tick = savefile.tick
 		start_tick = Time.get_unix_time_from_system() - timer_label.tick
@@ -171,8 +173,9 @@ func _process(delta: float) -> void:
 				savefile.reset()
 				savefile.save_file()
 				savefile.load_file()
-			for orb in orbs.get_children():
-				if orb is UpgradeOrb2D:
-					orb.used = false
-					orb.render_sprite = true
-					orb.queue_redraw()
+			for area in $"/root/Layer 1/Terrain".get_children():
+				for child in area.get_children():
+					if child is UpgradeOrb2D:
+						child.used = false
+						child.render_sprite = true
+						child.queue_redraw()
