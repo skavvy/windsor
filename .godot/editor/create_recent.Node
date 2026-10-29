@@ -1,6 +1,8 @@
+TriggerArea2D
+Label
+Slowdown
 LevelTerrain
 PlayerInteractionArea2D
-TriggerArea2D
 PathDoorHandler
 PathFollow2D
 Path2D
@@ -10,6 +12,3 @@ BounceOrb2D
 BoostOrb2D
 UpgradeOrb2D
 Polygon2D
-PolygonTerrain2D
-Label
-HBoxContainer

@@ -16,4 +16,8 @@ func _process(delta: float) -> void:
 	transform_checker = get_viewport_transform().get_origin()
 
 func _on_timer_timeout() -> void:
+	if Engine.time_scale != 0:
+		$Timer.wait_time = 1 / Engine.time_scale
+	else:
+		$Timer.wait_time = 0
 	tick += 1

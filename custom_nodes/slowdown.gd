@@ -6,10 +6,18 @@ class_name Slowdown
 @export var speed: float = 0.01
 @export var invert: bool = false
 var in_process: bool
+@export var autostart: bool = true
 
-func _init() -> void:
+func start() -> void:
 	in_process = true
-	Engine.time_scale = amount
+	if not invert:
+		Engine.time_scale = amount
+
+func _ready() -> void:
+	if autostart:
+		in_process = true
+		if not invert:
+			Engine.time_scale = amount
 
 func _exit_tree() -> void:
 	in_process = false
@@ -22,7 +30,9 @@ func _process(_delta: float) -> void:
 			Engine.time_scale -= speed
 			if Engine.time_scale <= amount:
 				Engine.time_scale = amount
+				queue_free()
 		else:
 			Engine.time_scale += speed
 			if Engine.time_scale >= 1:
 				Engine.time_scale = 1
+				queue_free()
